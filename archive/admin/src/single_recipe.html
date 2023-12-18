@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single recipe</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container  mb-3">
+    <!-- menu -->
+    @@include('templates/menu.html')
+    <!-- end menu -->
+    <h1 class="text-center">Banana Pancakes</h1>
+</div>
+    
+<div class="container mt-3">
+    <!-- nav -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tags">Tags</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tools">Tools</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#ingredients">Ingredients</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#instructions">Instructions</a>
+        </li>
+    </ul>
+    
+    <!-- content -->
+    <div class="tab-content mt-3">
+        <!-- info -->
+        @@include('templates/single_tab_info.html')
+        <!-- tags -->
+        @@include('templates/single_tab_tags.html')
+        <!-- tools -->
+        @@include('templates/single_tab_tools.html')
+        <!-- ingredients -->
+         @@include('templates/single_tab_ingredients.html')
+        <!-- instructions -->
+        @@include('templates/single_tab_instructions.html')
+    </div>
+</div>
+
+</body>
+</html>
