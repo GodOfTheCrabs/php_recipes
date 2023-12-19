@@ -25,3 +25,17 @@ function delete_tag(e) {
     let id = this.getAttribute('tag_id')
     location.href = '/tag/delete?id=' + id;
 }
+
+let btn_tool_delete = document.querySelectorAll('.tool-delete');
+
+for (let i = 0; i < btn_tool_delete.length; i++) {
+    btn_tool_delete[i].onclick = delete_tool
+}
+
+function delete_tool(e) {
+    e.preventDefault()
+    let res = confirm("Are you sure");
+    if(!res) return
+    let id = this.getAttribute('tool_id')
+    location.href = '/tool/delete?id=' + id;
+}
